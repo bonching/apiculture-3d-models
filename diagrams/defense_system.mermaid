@@ -1,0 +1,15 @@
+graph TD
+    A[Start: Camera Captures Image Every 5 Minutes] --> B[Send Image to Server]
+    B --> C[Analyze Image with Object Detection AI Model]
+    C --> D{Predator Detected?}
+    D -->|Yes| E[Identify Predator Type]
+    D -->|No| A
+    E --> F{Aerial Predator?}
+    F -->|Yes| G[Trigger Sprinkler System]
+    F -->|No| H[Notify Beekeeper]
+    G --> I[Assess Threat Status]
+    I{Threat Resolved?}
+    I -->|Yes| J[Log Event and Return to Monitoring]
+    I -->|No| H
+    H --> J
+    J --> A
