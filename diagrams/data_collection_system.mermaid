@@ -1,0 +1,8 @@
+flowchart TD
+    A[Start: Raspberry Pi reads the sensors every 5 minutes] --> B[Collect metrics and send to the server]
+    B--> C[Data is saved to a time-series database]
+    C--> D[Anomaly detection AI agent analyzes the trends and patterns]
+    D--> E{Anomaly is detected?}
+    E -->|Yes| J[Notify Beekeeper]
+    E -->|No| A
+    J --> A
