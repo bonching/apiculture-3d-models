@@ -1,0 +1,21 @@
+{
+  "theme": "base",
+  "themeVariables": {
+    "primaryColor": "#FFD700",
+    "primaryTextColor": "#5D4037",
+    "primaryBorderColor": "#8B4513",
+    "lineColor": "#000000",
+    "lineColorBackground": "#F5F5DC",
+    "secondaryColor": "#FF8C00",
+    "tertiaryColor": "#FFA500",
+    "mainBkg": "#FFF8DC",
+    "noteBkgColor": "#FFD700",
+    "noteBorderColor": "#8B4513",
+    "actorBkg": "#F0E68C",
+    "actorBorder": "#8B4513",
+    "fontFamily": "Arial, sans-serif",
+    "fontSize": "14px",
+    "sequenceDiagram0": "#FFD700",
+    "sequenceDiagram1": "#FF8C00"
+  }
+}
