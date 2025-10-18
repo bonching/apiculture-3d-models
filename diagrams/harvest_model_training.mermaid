@@ -1,0 +1,10 @@
+graph TD
+    A[Initialize agent policy network, environment, and replay buffer] --> B
+    B[Observe states: <br>1. Tube angle <br>2. Slider position <br>3. Syringe extension <br>4. Target coordinate <br>5. Box dimensions] --> C
+    C[Select action: <br>1. Move slider forward or backward <br>2. Rotate tube <br>3. Extend or retract syringe] --> D
+    D[Interact with environment: execute action sequence, get next state] --> E
+    E[Calculate reward: based on proximity to target, pinch success, and collision avoidance] --> F
+    F[Store experience: state, action, reward, and next state in buffer] --> G
+    G[Sample batch, compute loss, update network] --> H
+    H[Repeat until convergence] -->|Loop| B
+    G -->|Periodic| I[Evaluate agent: test without exploration]
