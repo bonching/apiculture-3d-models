@@ -1,0 +1,30 @@
+erDiagram
+    FARMS ||--o{ HIVES : "contains"
+    HIVES ||--o{ SENSORS : "contains"
+    SENSORS ||--o{ METRICS : "produces"
+    FARMS {
+        int farm_id PK
+        string name
+        string location
+        datetime established_date
+    }
+    HIVES {
+        int hive_id PK
+        int farm_id FK
+        string name
+        string location
+        datetime setup_date
+    }
+    SENSORS {
+        int sensor_id PK
+        int hive_id FK
+        string type "e.g., temperature, humidity, weight, sound"
+        datetime installation_date
+        string status
+    }
+    METRICS {
+        datetime timestamp PK
+        int sensor_id FK
+        float value
+        string unit "e.g., °C, %, kg, dB"
+    }
